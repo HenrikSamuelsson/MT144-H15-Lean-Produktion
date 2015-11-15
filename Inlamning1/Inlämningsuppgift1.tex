@@ -36,9 +36,10 @@ Det behövs alltid ett byråkratiskt system, kontinuerlig förbättring kan inte
 \subsection*{Resultat av tillämpning}
 I denna sektion beskrivs en vald produkt med tillhörande tillverkningsflöde.
 \subsubsection*{Produktbeskrivning}
-Produkten som tillverkas är ett accesshanteringssystem. Systemet kommer i många olika men konfigurationer men alla system är  uppbyggda runt en \emph{centralenhet}. Till den centralenheten kopplas en eller flera \emph{noder}. Noderna är i normalläget låsta. En användare som vill ha åtkomst till en nod identifierar sig med hjälp av ett interface i centralenheten. Om identifikationen visar att användaren har rätt att öppna vald nod så ställs denna nod i öppet läge.
+Produkten som tillverkas är ett accesshanteringssystem. Systemet kommer i många olika men konfigurationer men gemensamt för alla system uppbyggnaden runt en \emph{centralenhet}. Till den centralenheten kopplas en eller flera \emph{noder}. Noderna är i normalläget låsta. En användare som vill ha åtkomst till en nod identifierar sig med hjälp av ett interface i centralenheten. Om identifikationen visar att användaren har rätt att öppna vald nod så ställs denna nod i öppet läge.
 
 Centralenheten är kopplad till Internet vilket gör att man kan lägga till och ta bort användare i redan driftsatta system. Det går även att logga händelser och övervaka systemstatus via Internetuppkopplingen.
+     
 \subsubsection*{Flödesbeskrivning}
 Det första steget i produktionen är test av kretskort för elektroniken i systemet. Korten tillverkas av en underleverantör och när dom anländer därifrån körs ett test i syfte att sålla bort felaktiga enheter.
 
@@ -54,7 +55,12 @@ Centralenheten och noder monteras in i det system som ska hanteras av låsen. I 
 
 Systemet strömsätts och centralenheten knyter upp kontakten med sina noder och  kontaktar sen servern för att hämta hem aktuell konfiguration.
 
-Systemet är nu komplett monterat och ett sista funktionstest görs innan systemet är redo att skickas ut till kund. 
+Systemet är nu komplett monterat och ett sista funktionstest görs innan systemet är redo att skickas ut till kund.
+
+\subsubsection*{Ändpunkter}
+Startpunkten i flödet är en uppsättning komponenter som ligger lagrade lokalt på företaget. Några av komponenterna är egenutvecklade specialanpassade specifikt för produkten, exempelvis plasthöljen och kretskort. Andra komponenter är mer av standard karaktär, såsom skruv och kablar, och kan köpas in från flera olika leverantörer.
+
+Slutpunkten i flödet är ett monterat och konfigurerat system för förvaring som behöver vara låsbart och ofta med dynamisk accesshantering. 
 
 \subsection*{Diskussion}
 <Här får du tillfälle att reflektera över ditt eget arbete. Gick det bra att tillämpa teorierna på ditt
