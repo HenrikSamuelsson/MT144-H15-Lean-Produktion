@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\section*{Inlämningsuppgift nummer 1}
+Av Henrik Samuelsson
+\subsection*{Syfte}
+I detta dokument introduceras ett valt tillverkningsflödet som kommer att analyseras mer grundligt under kursens senare delar. Produkten som tas fram i flödet är  ett elektroniskt system för accesshantering. Systemet uppbyggnad gås igenom och de olika delsteg som behövs för att gå från delkomponenter till ett fungerade system presenteras översiktligt.
+
+Rapporten introducerar även koncept inom ämnesområdet Lean production. Lean innebär att man försöker effektivisera sin produktion för att bli mer konkurrenskraftig. En analys enligt Lean av det valda tillverkningsflödet kommer sedan att genomföras under de kommande veckorna.
+
+\subsection*{Sammanfattning av teorierna}
+Det finns ett begrepp som kallas ``The Toyota Way'', och har kommit att bli en synonym till Lean, detta är en uppsättning principer och beteenden som ligger till grund för produktionen i företaget Toyota. Principerna tillämpas både i företagets administrativa del och i produktionsleden. Toyota sammanfattar sin filosofi, värderingar och tillverkningsideal inom två nyckelområden: Ständiga förbättringar, och respekt för människor.
+
+The Toyota Way innefattar fjorton olika principer. I denna sektion diskuteras princip två till åtta.
+\begin{description}
+\item[Princip 2.]
+\emph{Kontinuerligt processflöde som snabbt för problem till ytan.} Huvudsyftet med denna princip är att minska slöseri. Målet är att ha en snabb tillverkningsprocess där den första enheten är klar för inspektion redan innan man hunnit påbörja produktionen av ett stort antal enheter. Det gör att om ett fel upptäcks på slutprodukten så behöver man bara slänga eller modifiera ett minimalt antal enheter.
+\item[Princip 3.]
+\emph{Använd "pull" system för att undvika överproduktion.}
+En metod där en process signalerar sin föregångare att mer material behövs. Man bygger inte upp några stora mellanlager utan tillverkar först när en viss artikel verkligen efterfrågas.
+\item[Princip 4.]
+\emph{Jämna ut arbetsbelastningen.}
+Motverka överbelastning av utrustning och människor genom att försöka ha en eftersträva en jämn produktionsnivå.
+\item[Princip 5.]
+\emph{Vid problem stoppa processen och lös det direkt}
+Om ett problem upptäcks ska hela processen kunna stoppas och sen hjälper alla till att lösa problemet direkt så att det inte återkommer igen och igen. 
+\item[Princip 6]
+\emph{Standardisering är grunden för ständiga förbättringar och medarbetarskap.}
+Det behövs alltid ett byråkratiskt system. Kontinuerlig förbättring kan inte genomföras utan att förändringar dokumenteras på ett genomtänkt och systematisk sätt. Syftet är att ge den anställde ett medel för att underlätta tillväxt och förbättring av organisationen.
+\item[Princip 7]
+\emph{Använd visuell kontroll så inga problem döljs.} Cheferna ska med egna ögon vara ute och kontrollera arbetet. Både själva arbetet och kontrollerna blir enklare om bara det som verkligen behövs för arbetet ligger framme på arbetsplatsen. Målet är att alla arbetsplatser ska vara effektiva och produktiva, hjälpa människor att dela arbetsplatser, minska tiden letar efter nödvändiga verktyg och förbättra arbetsmiljön.
+\item[Princip 8]
+\emph{Använd bara pålitlig, väl beprövad teknik som tjänar ditt folk och processer.} Det får inte bli ett självändamål att använda ny teknik bara för att den är ny. Ny teknik ska börja användas först efter noggranna överväganden av fördelar och nackdelar.
+\end{description}
+
+\subsection*{Resultat av tillämpning}
+I denna sektion beskrivs en vald produkt med tillhörande tillverkningsflöde.
+\subsubsection*{Produktbeskrivning}
+Produkten som tillverkas är ett accesshanteringssystem. Systemet kommer i många olika konfigurationer men gemensamt för alla system uppbyggnaden runt en \emph{centralenhet}. Till den centralenheten kopplas en eller flera \emph{noder}. Noderna är i normalläget låsta. En användare som vill ha åtkomst till en nod identifierar sig med hjälp av ett interface i centralenheten. Om identifikationen visar att användaren har rätt att öppna vald nod så ställs denna nod i öppet läge.
+
+Centralenheten är kopplad till Internet vilket gör att man kan lägga till och ta bort användare i redan driftsatta system. Det går även att logga händelser och övervaka systemstatus via Internetuppkopplingen.
+     
+\subsubsection*{Flödesbeskrivning}
+Det första steget i produktionen är test av kretskort för elektroniken i systemet. Korten tillverkas av en underleverantör och när dom anländer därifrån körs ett test i syfte att sålla bort felaktiga enheter.
+
+Varje enhet ges efter ankomsttestet en identitet i form a serienummer som programmeras in i enheten.
+
+På vissa av kretskorten sitter processorer som ska förses med mjukvara. Detta görs genom att ansluta varje enskilt kort direkt till en lokal PC för att kunna ladda ner en grundmjukvara. 
+ 
+Efter test och första programmering monteras kretskorten i ett plasthölje. Centralenheten består av flera kort som ska monteras vilket även innefattar inmontering av en pekskärm. Noderna består bara av ett kretskort men innefattar montering av en elmotor och diverse mekanik för körning av låset. Efter detta steg har man hårdvarumässigt kompletta centralenheter och   noder i form av enskilda enheter komponenter som ligger redo i ett mellanlager för att senare kunna sättas ihop till ett system.
+
+Kunden beställer ett system som består av en centralenhet och en eller flera enheter. Konfigurationen ställs in i ett webbaserat gränssnitt efter kundens önskemål. Konfiguration ligger sedan lagrad på en server i väntan på att centralenheten ska koppla upp sig och hämta ner sin konfiguration.
+
+Centralenheten och noder monteras in i det system som ska hanteras av låsen. I detta skede görs även en sladdragning mellan centralenheten och noderna.
+
+Systemet strömsätts och centralenheten knyter upp kontakten med sina noder och  kontaktar sen servern för att hämta hem aktuell konfiguration.
+
+Systemet är nu komplett monterat och ett sista funktionstest görs innan systemet är redo att skickas ut till kund.
+
+\subsubsection*{Ändpunkter}
+Startpunkten i flödet är en uppsättning komponenter som ligger lagrade lokalt på företaget. Några av komponenterna är egenutvecklade specialanpassade specifikt för produkten, exempelvis plasthöljen och kretskort. Andra komponenter är mer av standard karaktär, såsom skruv och kablar, och kan köpas in från flera olika leverantörer.
+
+Slutpunkten i flödet är ett monterat och konfigurerat system för förvaring som behöver vara låsbart och ofta med dynamisk accesshantering.
+
+\subsubsection*{Organisationen} 
+Huvuduppgiften för organisationen är att sköta utveckling av elektronik mjukvara och it-stöd i form av webblösningar. Antalet anställda är drygt ett dussin, varav merparten är utvecklare. Montering och konfigurering sker i nuläget ofta lokalt i organisationen men ska på sikt, när produkten är mogen, flyttas ut på golvet i fabrik.
+
+\subsubsection*{Tolkning av principerna i valt flöde}
+I denna sektion görs en återkoppling av principerna som listades ovan genom att att försöka applicera dem på det valda flödet. 
+
+Då inte alla delar tillverkas på samma geografiska plats blir det tyvärr svårt att få till ett optimalt enstycksflöde för att så snabbt så möjligt få upp problem till ytan. Plasthöljen och komponenter formsprutas av en underleverantör medan en annan leverantör tillverkar kretskort. Till sist monteras allt i plåtsystem som tillverkas av en tredje part. Alla dessa tre moment kräver var för sig en omfattande maskinpark och expertis som i nuläget inte är rimlig att samla på en plats. På länge sikt kan man tänka sig att planera för att integrera dessa moment på en plats, för att få ett snabbare flöde. Men detta är ett omfattande projekt som inte avhandlas närmare i denna rapport. 
+ 
+Även om det inte går att få till ett enstycksflöde som omfattar hela produktionen i närtid så går det ända att göra en del nu direkt genom att optimera delar av flödet. Det skulle gå att få till betydande förbättringar gällande princip 2 -- att bygga ett kontinuerligt processflöde som snabbt för problemen till ytan. Momenten ankomsttest, serienummerprogrammering, grundmjukvaruprogrammering, montering i hölje, grundtest (nytt test som inte görs idag) lämpar sig mycket väl för att göras i ett enstycksflöde. Förutsatt att produktionsmiljön anpassas i form av en U-formad produktionscell där all utrustning som behövs för dessa moment samlas.
+
+När det gäller princip 3 -- att undvika överproduktion genom att använda dragande system, så används denna princip till viss del. Det går dock att göra förbättringar gällande att styra upp rutiner för vem som ansvarar för att nya delar beställs i tid. Det system som ska användas för att signalera nya beställningar behöver även konfigureras och uppgraderas.
+
+Om man tittar på princip 4 -- jämna ut arbetsbelastningen och princip 6 -- standardisering är grunden för ständiga förbättringar och medarbetarskap, så finns det idag rutiner som ska följas för beställningar som innefattar hur kunder ska beställa och vilket resulterande datum dom beräknas kunna få sitt system levererat. Problemet här är att disciplinen när det gäller att följa dessa rutiner är dålig och det skapar stress och kvalitetsproblem när beställningar trycks igenom produktionssystemet på icke standardiserade sätt.
+
+När det gäller princip 5 så är organisationen så pass liten i nuläget att om ett problem uppstår så stoppar det hela flödet. Detta på grund av att det är bara ett fåtal personer inblandande i det givna flödet. Sen finns det väl alltid ändå en risk att man tycker att det där är någon annans problem.
+
+Princip 7 innefattar att ha ordning och reda i produktionen det finns här mycket att göra då utvecklingsavdelning och produktion är dåligt separerade i organisationen vilket ger oordning.
+
+Princip 8 är problematisk att tillämpa då hela affärsidén går ut på att försöka använda ny teknik för att få konkurrensfördelar gentemot etablerade företag och metodiker. Kan nog vara så att man måste tänja lite på denna principen i detta specifika fall. Det är såklart ett vågspel men satsar man ingenting så kan man ju inte heller vinna något.
+
+\subsection*{Diskussion}
+Det är för tidigt i kursen för att kunna göra någon egentlig tillämpning av teorierna på det valda flödet. Planen framöver är först att läsa hela kursboken. Efter det så kommer det att bli fråga om att hämta in mer kunskap om flödet genom att studera arbetet på organisationen och köra intervjuer med de medarbetare som arbetar med de delar av flödet som jag personligen är minst inblandad i.
+\end{document}
