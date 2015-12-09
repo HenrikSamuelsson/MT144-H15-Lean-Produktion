@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\section*{Inlämningsuppgift Nummer 3}
+Av Henrik Samuelsson
+\subsection*{Syfte}
+Lean innefattar många olika koncept. I denna inlämningsuppgift är det dags att studera och diskutera standardisering av flöden. Vi tittar även på vad som menas med japanska termerna kanban, jidoka och  heijunka och försöker tillämpa dom på ett tillverkningsflöde. Slutligen kommer även en förbättring baserad på PDCA att diskuteras.
+
+Syftet är att utöka kunskaper om Lean men även att efter årsskiftet faktiskt implementera  vissa av de redovisade åtgärderna på riktigt i tillverkningsflödet.
+
+\subsection*{Sammanfattning av teorierna}
+Målet med att producera en produkt är att omvandla råvaror till den slutgiltiga produkten som kunden är beredd att betala för. Arbetet som läggs ner i form av energi och kunnande för att producera produkten tillför ett mervärde och det är detta mervärde som gör att det går att driva en organisation med vinst.
+
+Omvandlingsprocessen från råvara till färdig produkt kan i stort sett alltid delas upp i ett antal delprocesser. När man studerar dessa delprocesser så går det att dela upp dem i två olika grupper. I den första gruppen hamnar de moment som verkligen tillför ett värde till produkten. Det vill säga ett moment som verkligen är ett nödvändigt steg för att komma framåt mot slutmålet. I andra gruppen hamnar moment som inte är värdeskapande.
+
+För att kunna vara konkurrensmässig gäller det att ha så få moment så möjligt som inte är värdeskapande. Det går aldrig helt att få bort dessa moment, men det gäller att hela tiden att arbeta för att utveckla sin tillverkningsprocess för att eliminera eller åtminstone korta ner ledtiden för dessa moment. 
+
+\subsubsection*{Slöserier}
+Icke värdeskapande moment kallas för slöseri. Det går att dela identifiera olika typer av slöseri. På företaget Toyota har man delat valt att göra en uppdelning i följande olika typer. 
+\begin{description}
+\item[Överproduktion]
+Huvudproblemet med överproduktion är att man riskerar att få slänga delar eftersom kunderna i framtiden inte efterfrågar just denna produkten. Sen är överproduktion dåligt på flera sätt då det leder vidare till andra typer av slöseri som redovisas nedan. Det bör dock nämnas överproduktion faktiskt motverkar vissa typer av slöseri. Till exempel minskas risken för väntan genom att ha en överproduktion i form av buffertlager.
+\item[Väntan]
+Detta slöseri innebär att en arbetare står sysslolös. Kan orsakas av tidigare delar i flödet inte klarar av att leverera i nödvändig takt.
+\item[Lager]
+Att ha stora lager kostar i form av plats i fabriken och innebär att tid måste läggas på att packa ner saker som kanske måste lagras i speciell skyddande miljö. 
+\item[Rörelse]
+En arbetare ska kunna arbeta så smidigt så möjligt och röra sig så kort sträcka så möjligt för när hen utför sin arbetsuppgift.
+\item[Omarbete]
+Att behöva göra om ett moment för att det blev fel första gången. Ett annat exempel kan vara att behöva ta ut och återanvända komponenter, för att en redan monterad överproducerad produkt inte längre efterfrågas av kunderna.
+\item[Överarbete]
+Att tillföra funktioner till en produkt som inte efterfrågas av kunden och därmed inte tillför egentligt värde.
+\item[Transporter]
+Transporter externt, och internt på fabriken, tillför inget värde för kunden och ska därför minimeras.
+\item[Outnyttjad kreativitet]
+Man måste ta sig tid att lyssna och ta till vara på nya förslag från medarbetarna för förbättringar. Kan gälla både mindre effektiviseringar i tillverkningsprocesser eller mer genomgripande ändringar i form av produktdesign som innebär mindre materialåtgång eller snabbare flöden.  
+\end{description}
+
+\subsubsection*{Värdeflödesanalys}
+Genom att rita upp en bild av en process enligt ett visst system så får man en \emph{värdeflödesanalys}. Syftet med kartläggningen är att upptäcka slöseri som kan elimineras.
+
+En viktig komponent i värdeflödeanalysen är en tidslinje som åskådliggör tiden som går åt för värdeskapande moment relativt icke-värdeskapande moment.
+
+Efter att ha kartlagt det flöde man har idag så brukar man även rita upp ett framtida önskat värdeflöde som vill åstadkomma genom att genomföra förändringar gällande hur man arbetar i sin process.
+
+\subsection*{Resultat av tillämpning}
+En värdesflödesanalys har gjorts av i form av en bild som bifogas som en bilaga. I denna sektion redovisas först noteringar om det studerade flödet som med fördel kan läsas parallellt medan man studerar bilden av värdeflödet.
+
+Efter sektionerna som diskuterar underlaget för värdeflödesanlysen följer diskussioner om de olika typerna av slöseri som finns i flödet. Till sist följer åtgärder för hur man skulle kunna eliminera eller reducera ett urval av slöserierna.
+
+\subsubsection*{Nodenheter}
+Systemet som tillverkas är tvådelat där den ena delen består av en uppsättning noder. Delar till noderna anländer från ett antal olika leverantörer.
+
+En del är ett elektroniskt styrkort som för-testas och förses med ID nummer när det anländer till produktionsanläggningen.
+
+Noderna är motordrivna och ett moment är att sätta fast ett kugghjul på varje motor. Efter det att kugghjulet är monterat så ska varje motor lödas fast på ett styrkort.
+
+Styrkorten behöver även förses med mjukvara. Detta kan göras i samband med för-testet men ibland så kan detta moment behövas göras om eftersom det kommit en senare version av mjukvara under den tid som enheten ligger i mellanlager.
+
+Elektroniken det vill säga styrkort med motor monteras sedan in i ett plasthölje tillsammans med ett ett antal rörliga delar.
+
+Nodenheten flyttas sedan till ett mellanlager.
+  
+\subsubsection*{Centralenhet}
+Ett komplett system består av ett antal noder kopplad till en centralenhet. Denna enhet består av ett antal olika delar som levereras av olika leverantörer. 
+
+Centralenheten innefattar två olika elektroniskt styrkort som för-testas och förses med ID nummer när det anländer till produktionsanläggningen. 
+
+Varje enhet ges efter ankomsttestet en identitet i form a serienummer som programmeras in i enheten.
+
+Centralenheten ska sedan förses med mjukvara.
+
+Elektroniken monteras sedan in ett plasthölje.
+
+Centralenheten flyttas sedan till ett mellanlager.
+
+\subsubsection*{Kundorder}
+När det kommer in en kundorder plockas ett antal noder fram från lagret tillsammans med en centralenhet.Dessa kopplas ihop med sladdar.
+
+Centralenheten konfigureras upp enligt kundens önskemål och systemet testkörs sedan. 
+
+Systemet kopplas sedan delvis isär igen och skickas vidare till en annan anläggning för slutmontering.
+
+\subsection*{Diskussion}
+Det är för tidigt i kursen för att kunna göra någon egentlig tillämpning av teorierna på det valda flödet. Planen framöver är först att läsa hela kursboken. Efter det så kommer det att bli fråga om att hämta in mer kunskap om flödet genom att studera arbetet på organisationen och köra intervjuer med de medarbetare som arbetar med de delar av flödet som jag personligen är minst inblandad i.
+\end{document}
